@@ -1,0 +1,20 @@
+#submit-btn {
+    color: brown;
+}
+body {
+    color: blue;
+    text-align: center;
+    background-color: lightsalmon;
+}
+main {
+    padding: 5rem;
+}
+label {
+    display: block;
+    padding: 1rem;
+}
+
+#submit-btn {
+    
+    text-align: center;
+}
