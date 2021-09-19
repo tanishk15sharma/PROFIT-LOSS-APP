@@ -1,20 +1,66 @@
-#submit-btn {
-    color: brown;
-}
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
 body {
-    color: blue;
+    font-family: Lato;
+    font-weight: bold;
+    background-color:
+        #ECFDF5;
     text-align: center;
-    background-color: lightsalmon;
+
 }
-main {
-    padding: 5rem;
+
+.span {
+    color: #065F46;
 }
+
+
+
+h1 {
+    font-family: Montserrat;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+    color:
+
+        #6B7280;
+}
+
+
 label {
+    font-size: 1.2rem;
     display: block;
-    padding: 1rem;
+    margin: 0.5rem auto 0;
+    padding: 2rem;
+}
+
+input {
+    font-family: Lato;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #065F46;
+    border-radius: 0.5rem;
+    display: block;
+    margin: 0 auto;
+    width: 14rem;
+    padding: 0.6rem 1.25rem;
 }
 
 #submit-btn {
-    
-    text-align: center;
+    font-family: Lato;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    background-color:
+        #065F46;
+    border: 1px solid #10B981;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    margin: 1.2rem auto;
+    color: bisque;
+}
+
+#output-box {
+    font-size: x-large;
+    margin-top: 1rem;
 }
