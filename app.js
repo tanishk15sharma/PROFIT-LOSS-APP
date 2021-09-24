@@ -23,13 +23,13 @@ function calculateProfitAndLoss(initial, quantity, current)
         var loss = (initial - current) * quantity
         var lossPercentage = (loss / initial) * 100;
 
-        showOutput(`oops it's loss ${loss} ! The loss percentage is ${lossPercentage}  `);
+        showOutput(`oops it's loss ${loss} ! The loss percentage is ${lossPercentage} % `);
 
 
     } else if (current > initial) {
         var profit = (current - initial) * quantity
         var profitPercentage = (profit / initial) * 100;
-        showOutput(`wow it's profit ${profit} ! The profit percentage is ${profitPercentage}  `);
+        showOutput(`wow it's profit ${profit} ! The profit percentage is ${profitPercentage} % `);
     } else {
         showOutput("no gain , no change ");
     }
