@@ -7,9 +7,9 @@ var outputBox = document.querySelector("#output-box")
 submitBtn.addEventListener("click", checkHandler)
 
 function checkHandler() {
-    var ip = initialPrice.value
-    var qty = stocksQuantity.value
-    var curr = currentPrice.value
+    var ip = Number(initialPrice.value);
+    var qty = Number(stocksQuantity.value);
+    var curr = Number(currentPrice.value);
 
     calculateProfitAndLoss(ip, qty, curr)
 }
@@ -18,18 +18,23 @@ function checkHandler() {
 
 function calculateProfitAndLoss(initial, quantity, current)
 
-{
-    if (initial > current) {
-        var loss = (initial - current) * quantity
+{  if (initial <= 0 || quantity <= 0 || current <= 0) {
+    return outputBox.innerText = "Enter positive value ";
+}
+  else  if (initial > current) {
+        var loss = ((initial - current) * quantity ).toFixed(3);
         var lossPercentage = (loss / initial) * 100;
+        
 
-        showOutput(`oops it's loss ${loss} ! The loss percentage is ${lossPercentage} % `);
+        showOutput(`oops it's loss Rs.${loss} ! The loss percentage is ${lossPercentage} % `);
+        
 
-
+        //loss logic
     } else if (current > initial) {
-        var profit = (current - initial) * quantity
+        var profit = ((current - initial) * quantity ).toFixed(3)
         var profitPercentage = (profit / initial) * 100;
-        showOutput(`wow it's profit ${profit} ! The profit percentage is ${profitPercentage} % `);
+        showOutput(`wow it's profit Rs.${profit} ! The profit percentage is ${profitPercentage} % `);
+        //profit logic
     } else {
         showOutput("no gain , no change ");
     }
