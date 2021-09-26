@@ -19,7 +19,12 @@ function checkHandler() {
 function calculateProfitAndLoss(initial, quantity, current)
 
 {
-    if (initial > current) {
+    if(initial<=0||quantity<=0||current<=0){
+        return outputBox.innerText = "Enter positive numbers!"
+    }
+
+    else if (initial > current) {
+        //loss
         var loss = (initial - current) * quantity
         var lossPercentage = (loss / initial) * 100;
 
@@ -27,6 +32,7 @@ function calculateProfitAndLoss(initial, quantity, current)
 
 
     } else if (current > initial) {
+        //profit
         var profit = (current - initial) * quantity
         var profitPercentage = (profit / initial) * 100;
         showOutput(`wow it's profit ${profit} ! The profit percentage is ${profitPercentage} % `);
