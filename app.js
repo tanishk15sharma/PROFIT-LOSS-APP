@@ -25,16 +25,18 @@ function calculateProfitAndLoss(initial, quantity, current)
         var loss = ((initial - current) * quantity ).toFixed(3);
         var lossPercentage = (loss / initial) * 100;
 
-
         showOutput(`oops it's loss Rs.${loss} ! The loss percentage is ${lossPercentage.toFixed(3)} % `);
-        
-
         //loss logic
+        outputBox.style.color='red';
+
     } else if (current > initial) {
         var profit = ((current - initial) * quantity ).toFixed(3);
         var profitPercentage = (profit / initial) * 100;
+
         showOutput(`wow it's profit Rs.${profit} ! The profit percentage is ${profitPercentage.toFixed(3)} % `);
         //profit logic
+        outputBox.style.color='green';
+
     } else {
         showOutput("no gain , no change ");
     }
@@ -42,5 +44,7 @@ function calculateProfitAndLoss(initial, quantity, current)
 
 function showOutput(message) {
 
-    outputBox.innerHTML = message
+    outputBox.innerHTML = message;
+
+
 }
