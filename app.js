@@ -25,7 +25,7 @@ function calculateProfitAndLoss(initial, quantity, current)
 
     else if (initial > current) {
         //loss
-        var loss = (initial - current) * quantity
+        var loss = ((initial - current) * quantity).toFixed(3);
         var lossPercentage = (loss / initial) * 100;
 
         showOutput(`oops it's loss ${loss} ! The loss percentage is ${lossPercentage} % `);
@@ -33,7 +33,7 @@ function calculateProfitAndLoss(initial, quantity, current)
 
     } else if (current > initial) {
         //profit
-        var profit = (current - initial) * quantity
+        var profit = ((current - initial) * quantity).toFixed(3);
         var profitPercentage = (profit / initial) * 100;
         showOutput(`wow it's profit ${profit} ! The profit percentage is ${profitPercentage} % `);
     } else {
