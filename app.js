@@ -24,16 +24,16 @@ function calculateProfitAndLoss(initial, quantity, current)
   else  if (initial > current) {
         var loss = ((initial - current) * quantity ).toFixed(3);
         var lossPercentage = (loss / initial) * 100;
-        
 
-        showOutput(`oops it's loss Rs.${loss} ! The loss percentage is ${lossPercentage} % `);
+
+        showOutput(`oops it's loss Rs.${loss} ! The loss percentage is ${lossPercentage.toFixed(3)} % `);
         
 
         //loss logic
     } else if (current > initial) {
-        var profit = ((current - initial) * quantity ).toFixed(3)
+        var profit = ((current - initial) * quantity ).toFixed(3);
         var profitPercentage = (profit / initial) * 100;
-        showOutput(`wow it's profit Rs.${profit} ! The profit percentage is ${profitPercentage} % `);
+        showOutput(`wow it's profit Rs.${profit} ! The profit percentage is ${profitPercentage.toFixed(3)} % `);
         //profit logic
     } else {
         showOutput("no gain , no change ");
