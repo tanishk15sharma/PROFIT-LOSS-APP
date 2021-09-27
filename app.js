@@ -18,24 +18,24 @@ function checkHandler() {
 
 function calculateProfitAndLoss(initial, quantity, current)
 
-{  if (initial <= 0 || quantity <= 0 || current <= 0) {
-    return outputBox.innerText = "Enter positive value ";
-}
-  else  if (initial > current) {
-        var loss = ((initial - current) * quantity );
-        var lossPercentage = (loss / initial) * 100;
-
-        showOutput(`oops it's loss Rs.${loss} ! The loss percentage is ${lossPercentage.toFixed(3)} % `);
-        //loss logic
-        outputBox.style.color='red';
-
+{
+    if (initial <= 0 || quantity <= 0 || current <= 0) {
+        return outputBox.innerText = "Enter positive value ";
     } else if (current > initial) {
-        var profit = ((current - initial) * quantity );
-        var profitPercentage = (profit / initial) * 100;
+        var profit = ((current - initial) * quantity);
+        var profitPercentage = ((current - initial) /initial) * 100;
 
         showOutput(`wow it's profit Rs.${profit} ! The profit percentage is ${profitPercentage.toFixed(3)} % `);
         //profit logic
-        outputBox.style.color='green';
+        outputBox.style.color = 'green';
+
+    } else if (initial > current) {
+        var loss = ((initial - current) * quantity);
+        var lossPercentage = ( ( initial- current )/initial) * 100;
+
+        showOutput(`oops it's loss Rs.${loss} ! The loss percentage is ${lossPercentage.toFixed(3)} % `);
+        //loss logic
+        outputBox.style.color = 'red';
 
     } else {
         showOutput("no gain , no change ");
